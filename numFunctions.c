@@ -73,7 +73,20 @@ int print_binary(va_list number)
 {
 	int n = va_arg(number, int);
 	int d = 2, c = 0;
-
+	
+	if (n == 0)
+	{
+		_putchar(0 + '0');
+		c++;
+	}
+	else if (n == 1)
+	{
+		_putchar(1 + '0');
+		c++;
+	}
+	else
+	{
 	c = print_rec_b(n, d, c);
+	}
 	return (c);
 }
