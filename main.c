@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-    _printf("%b\n", 1);
-    _printf("%i\n", 19);
+    _printf("%b\n", 4987);
+    _printf("%i\n", 15);
+    _printf("%d\n", -67);
     return (0);
 }

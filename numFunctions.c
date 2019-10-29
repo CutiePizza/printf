@@ -27,7 +27,7 @@ int print_di(va_list di)
 		c++;
 		_putchar(a + '0');
 	}
-	else if (n > 9)
+	else
 	{
 		while (n / div >= 10)
 		{
