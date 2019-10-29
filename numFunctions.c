@@ -6,39 +6,28 @@
  *@vi: the list of arguments
  * Return: number of printed characters
  */
-int print_di(va_list vi)
+int print_di(va_list di)
 {
-	int i, num, div, o, n, count = 0;
+	unsigned int div = 1;
+	int c = 0;
+	int n = va_arg(di, int);
+	int a = n % 10;
 
-	n = va_arg(vi, int);
-	o = n % 10;
-	n = n / 10;
-	if (o < 0)
+	if (n < 0)
 	{
-		n = -n;
-		o = -o;
+		n *= -1;
 		_putchar('-');
-		count++;
+		c++;
 	}
-	num = n;
-	div = 1;
-	if (num > 0)
+	while (n / div >= 10)
 	{
-		while ((num / 10) != 0)
-		{
-			num = num / 10;
-			div = div * 10;
-		}
-		while (div >= 1)
-		{
-			i = n / div;
-			_putchar(i + '0');
-			count++;
-			n = n % div;
-			div = div / 10;
-		}
+		div *= 10;
 	}
-	_putchar(o + '0');
-	count++;
-	return (count);
+	for (; div >= 1; div /= 10)
+	{
+		_putchar((n / div) + '0');
+		c++;
+		n = n % div;
+	}
+	return (c);
 }
