@@ -48,21 +48,18 @@ int print_di(va_list di)
   * print_rec_b - print integers in binary
   * @n: integer
   * @d: integer
-  * @c: integer
+  * @p: integer
   * Return: length of binary number, c
   */
 
-int print_rec_b(int n, int d, int c)
+void print_rec_b(int n, int d, int *p)
 {
-	_printf("c = %d\n", c);		
 	if (n < 1)
-		return (0);
-
-		print_rec_b(n / d, d, ++c);
-		_putchar((n % d) + '0');
-		return (c);
+		return;
+	*p +=  1;
+	print_rec_b(n / d, d, p);
+	_putchar((n % d) + '0');
 }
-
 /**
   * print_binary - print integers in binary
   * @number: list
@@ -73,14 +70,11 @@ int print_binary(va_list number)
 {
 	int n = va_arg(number, int);
 	int d = 2, k = 0;
-	
+
 	if (n == 0)
 		return (_putchar(0 + '0'));
-	else if (n == 1)
+	if (n == 1)
 		return (_putchar(1 + '0'));
-	else
-		k = print_rec_b(n, d, 0);
+	print_rec_b(n, d, &k);
 	return (k);
-	
-	
 }

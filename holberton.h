@@ -20,7 +20,7 @@ int print_s(va_list);
 int print_di(va_list);
 int print_binary(va_list);
 int print_per(void);
-int print_rec_b(int, int, int);
+void print_rec_b(int, int, int *);
 int (*get_spec(char c))(va_list);
 int _printf(const char *format, ...);
 #endif
