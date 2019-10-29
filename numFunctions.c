@@ -15,7 +15,7 @@ int print_di(va_list di)
 
 	n = n / 10;
 
-	if (n < 0)
+	if (a < 0 || n < 0)
 	{
 		n *= -1;
 		_putchar('-');
@@ -31,5 +31,7 @@ int print_di(va_list di)
 		c++;
 		n = n % div;
 	}
+	_putchar(a);
+	c++;
 	return (c);
 }
