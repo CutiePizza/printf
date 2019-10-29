@@ -68,7 +68,7 @@ void print_rec_b(int n, int d, int *p)
 
 int print_binary(va_list number)
 {
-	int n = va_arg(number, int);
+	unsigned int n = va_arg(number, int);
 	int d = 2, k = 0;
 
 	if (n == 0)
