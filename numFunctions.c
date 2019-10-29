@@ -47,16 +47,28 @@ int print_di(va_list di)
 
 /**
   * print_binary - print integers in binary
-  * @i: list 
+  * @number: list
   * Return: characters printed
   */
 
-int print_binary(va_list i)
+int print_binary(va_list number)
 {
+	int n = va_arg(number, int);
+	int d = 2, c = 1, i;
 
+	while (n / d >= 1)
+	{
+		d *= 2;
+		c++;
+	}
 
-
-
-
-
+	for (i = 0; i < c; i++)
+	{
+		if (n % d == 0)
+			_putchar(1 + '0');
+		else
+			_putchar(0 + '0');
+		n = n / 2;
+	}
+	return (c);
 }
