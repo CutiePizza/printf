@@ -18,20 +18,29 @@ int print_di(va_list di)
 	if (a < 0 || n < 0)
 	{
 		n *= -1;
+		a *= -1;
 		_putchar('-');
 		c++;
 	}
-	while (n / div >= 10)
+	if (n == 0)
 	{
-		div *= 10;
-	}
-	for (; div >= 1; div /= 10)
-	{
-		_putchar((n / div) + '0');
 		c++;
-		n = n % div;
+		_putchar(a + '0');
 	}
-	_putchar(a);
-	c++;
+	else if (n > 9)
+	{
+		while (n / div >= 10)
+		{
+			div *= 10;
+		}
+		for (; div >= 1; div /= 10)
+		{
+			_putchar((n / div) + '0');
+			c++;
+			n = n % div;
+		}
+		_putchar(a + '0');
+		c++;
+	}
 	return (c);
 }
