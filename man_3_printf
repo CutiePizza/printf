@@ -8,16 +8,16 @@
 .SH DESCRIPTION
 The _printf() function writes to the standard output according to the given format and returns the number of the printed characters.
 .SH CONVERSION SPECIFIERS
-.B c 
+.B c
 - Print the character given.
 .br
-.B s 
+.B s
 - Print an array of characters.
 .br
-.B i, d 
+.B i, d
 - Print integers given.
 .br
-.B % 
+.B %
 - A % is printed.
 .SH RETURN VALUE
 Upon successful return, _printf return the number of the printed characters (excluding the null byte).
