@@ -54,13 +54,13 @@ int print_di(va_list di)
 
 int print_rec_b(int n, int d, int c)
 {
-if (n >= 1)
-{
-	c++;
-	print_rec_b(n / d, d, c);
-	_putchar((n % d) + '0');
-}
-return (c);
+	_printf("c = %d\n", c);		
+	if (n < 1)
+		return (0);
+
+		print_rec_b(n / d, d, ++c);
+		_putchar((n % d) + '0');
+		return (c);
 }
 
 /**
@@ -72,21 +72,15 @@ return (c);
 int print_binary(va_list number)
 {
 	int n = va_arg(number, int);
-	int d = 2, c = 0;
+	int d = 2, k = 0;
 	
 	if (n == 0)
-	{
-		_putchar(0 + '0');
-		c++;
-	}
+		return (_putchar(0 + '0'));
 	else if (n == 1)
-	{
-		_putchar(1 + '0');
-		c++;
-	}
+		return (_putchar(1 + '0'));
 	else
-	{
-	c = print_rec_b(n, d, c);
-	}
-	return (c);
+		k = print_rec_b(n, d, 0);
+	return (k);
+	
+	
 }
