@@ -1,17 +1,27 @@
-.TH man 2 "04 May 2015" "0.32" "holberton man page"
+.TH _PRINTF 3 "29 October 2019" "0.1" "_printf man page"
 .SH NAME
-.B holberton
-- become a full-stack software engineer.
+.B _printf
+- formatted output conversion.
 .SH SYNOPSIS
-holberton [STUDENTNAME]
+.B #include "holberton.h"
+.B int _printf(const char *format, ...);
 .SH DESCRIPTION
-Holberton School is a project-based alternative to college for the next generation of software engineers.
-.SH OPTIONS
-.B holberton
-does not take any options. However, you can supply studentname.
-.SH SEE ALSO
-.I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
+The _printf() function writes to the standard output according to the given format and returns the number of the printed characters.
+.SH CONVERSION SPECIFIERS
+.B c 
+- Print the character given.
+.br
+.B s 
+- Print an array of characters.
+.br
+.B i, d 
+- Print integers given.
+.br
+.B % 
+- A % is printed.
+.SH RETURN VALUE
+Upon successful return, _printf return the number of the printed characters (excluding the null byte).
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
+Houssem Eddine Ben Khalifa, Inès Chokri.
