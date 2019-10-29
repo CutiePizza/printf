@@ -13,10 +13,10 @@ int _printf(const char *format, ...)
 	int (*print)(va_list);
 	int compteur = 0;
 
-	va_start(list, format);
 	if (format == NULL)
 		return (-1);
 
+	va_start(list, format);
 	while (format && format[i])
 	{
 		if (format[i] != '%')
