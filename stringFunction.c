@@ -69,6 +69,7 @@ int (*get_spec(char c))(va_list)
 		{"d", print_di},
 		{"i", print_di},
 		{"b", print_binary},
+		{"R", print_rot},
 		{NULL, NULL}
 	};
 	int j = 0;

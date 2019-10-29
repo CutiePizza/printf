@@ -47,18 +47,17 @@ int print_di(va_list di)
 /**
   * print_rec_b - print integers in binary
   * @n: integer
-  * @d: integer
   * @p: integer
   * Return: length of binary number, c
   */
 
-void print_rec_b(int n, int d, int *p)
+void print_rec_b(int n, int *p)
 {
-	if (n < 1)
+	if (n <= 0)
 		return;
-	*p +=  1;
-	print_rec_b(n / d, d, p);
-	_putchar((n % d) + '0');
+	*p += 1;
+	print_rec_b(n / 2, p);
+	_putchar((n % 2) + '0');
 }
 /**
   * print_binary - print integers in binary
@@ -69,12 +68,65 @@ void print_rec_b(int n, int d, int *p)
 int print_binary(va_list number)
 {
 	unsigned int n = va_arg(number, int);
-	int d = 2, k = 0;
+	int k = 0, num;
 
 	if (n == 0)
 		return (_putchar(0 + '0'));
 	if (n == 1)
 		return (_putchar(1 + '0'));
-	print_rec_b(n, d, &k);
-	return (k);
+	print_rec_b(n, &k);
+
+	num = k;
+	_printf("\nk = %d\n", num);
+	return (num);
+}
+
+
+/**
+ * rot13 - encodes a string with rot13 algorithm.
+ * @ch: character
+ * Return: Always 0.
+ */
+
+char *rot13(char *ch)
+{
+
+	int i, j;
+	char T[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char I[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; ch[i] != '\0'; i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (T[j] == ch[i])
+			{
+				ch[i] = I[j];
+				break;
+			}
+		}
+	}
+	return (ch);
+}
+
+int print_rot(va_list rot)
+{
+	char *str = va_arg(rot, char *);
+	char *null = "(null)";
+	char *strFinal;
+	int i = 0;
+
+	if (str != NULL)
+	{
+		strFinal = rot13(str);
+		for (i = 0; strFinal[i]; i++)
+			_putchar(strFinal[i]);
+	
+	}
+	else 
+	{
+		for (i = 0; null[i]; i++)
+			_putchar(null[i]);
+	}
+	return (i);
 }
