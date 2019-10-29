@@ -44,3 +44,19 @@ int print_di(va_list di)
 	}
 	return (c);
 }
+
+/**
+  * print_binary - print integers in binary
+  * @i: list 
+  * Return: characters printed
+  */
+
+int print_binary(va_list i)
+{
+
+
+
+
+
+
+}
