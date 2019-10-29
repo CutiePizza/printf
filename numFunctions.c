@@ -42,6 +42,12 @@ int print_di(va_list di)
 		_putchar(a + '0');
 		c++;
 	}
+	else
+	{
+		_putchar(n + '0');
+		_putchar(a + '0');
+		c += 2;
+	}
 	return (c);
 }
 /**
@@ -75,7 +81,6 @@ int print_binary(va_list number)
 	if (n == 1)
 		return (_putchar(1 + '0'));
 	print_rec_b(n, &k);
-
 	num = k;
 	_printf("\nk = %d\n", num);
 	return (num);
