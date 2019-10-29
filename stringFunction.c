@@ -66,6 +66,8 @@ int (*get_spec(char c))(va_list)
 	cs array[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"d", print_di},
+		{"i", print_di},
 		{NULL, NULL}
 	};
 	int j = 0;

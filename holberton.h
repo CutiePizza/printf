@@ -17,6 +17,7 @@ typedef struct conversions_specifiers
 int _putchar(char c);
 int print_c(va_list);
 int print_s(va_list);
+int print_di(va_list);
 int print_per(void);
 int (*get_spec(char c))(va_list);
 int _printf(const char *format, ...);
