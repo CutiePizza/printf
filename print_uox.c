@@ -55,7 +55,7 @@ void print_rec_octal(unsigned int n, int *p)
 
 int print_o(va_list o)
 {
-	unsigned int n = va_arg(o, int);
+	unsigned int n = va_arg(o, unsigned int);
 	int k = 0, num;
 
 	if (n == 0)
@@ -101,7 +101,7 @@ void print_rec_hex(unsigned int n, int *p)
 
 int print_x(va_list x)
 {
-	unsigned int n = va_arg(x, int);
+	unsigned int n = va_arg(x, unsigned int);
 	int k = 0, num;
 
 	if (n == 0)

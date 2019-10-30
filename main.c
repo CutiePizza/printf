@@ -5,7 +5,7 @@
 int main(void)
 {
  int l = UINT_MAX + 1024;
-
+long int res = INT_MAX * 2;
 _printf("unsigned int : %u", UINT_MAX + 1024);
 _printf("\n\n");
 
@@ -57,7 +57,7 @@ _printf("\n\n");
 _printf("uuoxxX%xuoXo\n", 1024);
 _printf("\n\n");
 
-
+_printf("%x + %x = %x\n", INT_MAX, INT_MAX, res);
 
 return (0);
 
