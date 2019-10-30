@@ -47,6 +47,7 @@ void print_rec_octal(unsigned int n, int *p)
 	print_rec_octal(n / 8, p);
 	_putchar((n % 8) + '0');
 }
+
 /**
  * print_o - Print integers in octal
  * @o: list
