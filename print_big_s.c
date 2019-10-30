@@ -19,8 +19,12 @@ int print_big_s(va_list s)
 			{
 				_putchar('\\');
 				_putchar('x');
-				_putchar(0 + '0');
-				count += 3;
+				if (str[i] % 16 < 10)
+				{
+					_putchar(0 + '0');
+					count++;
+				}
+				count += 2;
 				print_rec_heX(str[i], &count);
 			}
 			else
