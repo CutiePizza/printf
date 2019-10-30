@@ -23,6 +23,9 @@ int print_per(void);
 void print_rec_b(unsigned int, int *);
 char *rot13(char *);
 int print_rot(va_list);
+int print_u(va_list);
+void print_rec_octal(unsigned int, int *);
+int print_o(va_list);
 int (*get_spec(char c))(va_list);
 int _printf(const char *format, ...);
 #endif
