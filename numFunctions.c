@@ -46,7 +46,7 @@ int print_di(va_list di)
   * Return: length of binary number, c
   */
 
-void print_rec_b(int n, int *p)
+void print_rec_b(unsigned int n, int *p)
 {
 	if (n <= 0)
 		return;
