@@ -33,7 +33,7 @@ int print_u(va_list u)
 }
 
 /**
- * print_rec_8 - print integers in binary
+ * print_rec_octal - print integers in binary
  * @n: integer
  * @p: integer
  * Return: length of binary number, c
@@ -63,6 +63,52 @@ int print_o(va_list o)
 	if (n == 1)
 		return (_putchar(1 + '0'));
 	print_rec_octal(n, &k);
+	num = k;
+	return (num);
+}
+
+/**
+ * print_rec_hex - print integers in binary
+ * @n: integer
+ * @p: integer
+ * Return: length of binary number, c
+ */
+
+void print_rec_hex(unsigned int n, int *p)
+{
+	unsigned int c = 97;
+	unsigned int a = 0;
+
+	if (n <= 0)
+		return;
+	*p += 1;
+	print_rec_hex(n / 16, p);
+
+	if ((n % 16) >= a && (n % 16) < 10)
+	_putchar((n % 16) + '0');
+	else if ((n % 16) >= 10 && (n % 16) <= 15)
+	{
+	c += ((n % 16) % 10);
+	_putchar(c);
+	}
+}
+
+/**
+ * print_x - Print integers in octal
+ * @x: list
+ * Return: number of integers printed.
+ */
+
+int print_x(va_list x)
+{
+	unsigned int n = va_arg(x, int);
+	int k = 0, num;
+
+	if (n == 0)
+		return (_putchar(0 + '0'));
+	if (n == 1)
+		return (_putchar(1 + '0'));
+	print_rec_hex(n, &k);
 	num = k;
 	return (num);
 }
