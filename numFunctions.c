@@ -27,7 +27,7 @@ int print_di(va_list di)
 		c++;
 		_putchar(a + '0');
 	}
-	else if (n > 9)
+	else 
 	{
 		while (n / div >= 10)
 		{
@@ -40,14 +40,8 @@ int print_di(va_list di)
 			n = n % div;
 		}
 		_putchar(a + '0');
-		c++;
 	}
-	else
-	{
-		_putchar(n + '0');
-		_putchar(a + '0');
-		c += 2;
-	}
+	c++;
 	return (c);
 }
 /**
@@ -82,7 +76,6 @@ int print_binary(va_list number)
 		return (_putchar(1 + '0'));
 	print_rec_b(n, &k);
 	num = k;
-	_printf("\nk = %d\n", num);
 	return (num);
 }
 
