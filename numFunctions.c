@@ -23,16 +23,11 @@ int print_di(va_list di)
 		c++;
 	}
 	if (n == 0)
-	{
-		c++;
 		_putchar(a + '0');
-	}
-	else 
+	else
 	{
 		while (n / div >= 10)
-		{
 			div *= 10;
-		}
 		for (; div >= 1; div /= 10)
 		{
 			_putchar((n / div) + '0');
@@ -106,7 +101,11 @@ char *rot13(char *ch)
 	}
 	return (ch);
 }
-
+/**
+ * print_rot - print after rot conversion.
+ * @rot: what's to convert to rot.
+ * Return: integer.
+ */
 int print_rot(va_list rot)
 {
 	char *str = va_arg(rot, char *);
@@ -119,9 +118,8 @@ int print_rot(va_list rot)
 		strFinal = rot13(str);
 		for (i = 0; strFinal[i]; i++)
 			_putchar(strFinal[i]);
-	
 	}
-	else 
+	else
 	{
 		for (i = 0; null[i]; i++)
 			_putchar(null[i]);
