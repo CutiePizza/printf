@@ -19,7 +19,7 @@ int print_big_s(va_list s)
 			{
 				_putchar('\\');
 				_putchar('x');
-				if (str[i] % 16 < 10)
+				if (str[i] % 10 < 10)
 				{
 					_putchar(0 + '0');
 					count++;
