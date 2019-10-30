@@ -19,7 +19,8 @@ int print_big_s(va_list s)
 			{
 				_putchar('\\');
 				_putchar('x');
-				count += 2;
+				_putchar(0 + '0');
+				count += 3;
 				print_rec_heX(str[i], &count);
 			}
 			else
