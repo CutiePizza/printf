@@ -5,6 +5,21 @@
 int main(void)
 {
 	int l = UINT_MAX + 1024;
+
+	_printf("%S", "No special character.");
+	_printf("\n");
+
+	_printf("%S", "\n");
+	_printf("\n");
+
+	_printf("%S", "\x01\x02\x03\x04\x05\x06\x07");
+	_printf("\n");
+
+	_printf("Could you print some non-prntable characters?\n%S\nThanks!\n", "Sure:\x1F\x7F\n");
+	_printf("\n");
+
+	char name[5] = "Messi";
+	_printf("My name is %s\n", name);
 /*	long int res = INT_MAX * 2;*/
 
 	_printf("--------------------UNSIGNED INT---------------\n");

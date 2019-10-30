@@ -18,11 +18,11 @@ void print_rec_heX(unsigned int n, int *p)
 	print_rec_heX(n / 16, p);
 
 	if ((n % 16) >= a && (n % 16) < 10)
-	_putchar((n % 16) + '0');
+		_putchar((n % 16) + '0');
 	else if ((n % 16) >= 10 && (n % 16) <= 15)
 	{
-	c += ((n % 16) % 10);
-	_putchar(c);
+		c += ((n % 16) % 10);
+		_putchar(c);
 	}
 }
 
