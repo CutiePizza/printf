@@ -72,7 +72,7 @@ int (*get_spec(char c))(va_list)
 		{"u", print_u},
 		{"o", print_o},
 		{"x", print_x},
-		{"X", print_x},
+		{"X", print_X},
 		{"R", print_rot},
 		{NULL, NULL}
 	};

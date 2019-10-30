@@ -27,6 +27,8 @@ int print_u(va_list);
 void print_rec_octal(unsigned int, int *);
 int print_x(va_list);
 void print_rec_hex(unsigned int, int *);
+int print_X(va_list);
+void print_rec_heX(unsigned int, int *);
 int print_o(va_list);
 int (*get_spec(char c))(va_list);
 int _printf(const char *format, ...);
