@@ -71,6 +71,7 @@ int (*get_spec(char c))(va_list)
 		{"b", print_binary},
 		{"u", print_u},
 		{"o", print_o},
+		{"p", print_p},
 		{"x", print_x},
 		{"X", print_X},
 		{"S", print_big_s},

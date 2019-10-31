@@ -31,6 +31,7 @@ int print_X(va_list);
 void print_rec_heX(unsigned int, int *);
 int print_big_s(va_list);
 int print_o(va_list);
+int print_p(va_list);
 int (*get_spec(char c))(va_list);
 int _printf(const char *format, ...);
 #endif
