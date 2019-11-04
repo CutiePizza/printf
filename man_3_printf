@@ -21,6 +21,15 @@ The _printf() function writes to the standard output according to the given form
 - A % is printed.
 .SH RETURN VALUE
 Upon successful return, _printf return the number of the printed characters (excluding the null byte).
+.SH EXAMPLE
+to print the int 45 with %d, do the following:
+.br
+_printf("%d", 45);
+.br
+to print a string, do the following:
+.br
+_printf("my name is %s", "Houssem");
+.br
 .SH BUGS
 No known bugs.
 .SH AUTHOR
